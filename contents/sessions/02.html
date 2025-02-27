@@ -1,7 +1,7 @@
 <!DOCTYPE html><html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.6.40">
+<meta name="generator" content="quarto-1.6.42">
 
 <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=yes">
 
@@ -19,7 +19,7 @@
 <script src="../../site_libs/quarto-search/fuse.min.js"></script>
 <script src="../../site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="../../">
-<link href="../../contents/interesting-stuff.html" rel="next">
+<link href="../../contents/sessions/03.html" rel="next">
 <link href="../../contents/sessions/01.html" rel="prev">
 <link href="../../android-chrome-512x512.png" rel="icon" type="image/png">
 <script src="../../site_libs/quarto-html/quarto.js"></script>
@@ -27,10 +27,10 @@
 <script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="../../site_libs/quarto-html/anchor.min.js"></script>
 <link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-549806ee2085284f45b00abea8c6df48.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-2f5df379a58b258e96c21c0638c20c03.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../../site_libs/bootstrap/bootstrap-e02d26bcf25074182f5ecbe0194a9a93.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="../../site_libs/bootstrap/bootstrap-ebfcb0ed0ac0539375ffcf22e0e9fa78.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -165,6 +165,12 @@
  <span class="menu-text">Session 2</span></a>
   </div>
 </li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../contents/sessions/03.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Session 3</span></a>
+  </div>
+</li>
       </ul>
   </li>
         <li class="sidebar-item">
@@ -206,12 +212,27 @@
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#tldr" id="toc-tldr" class="nav-link active" data-scroll-target="#tldr">TLDR</a></li>
+  <li><a href="#tldr" id="toc-tldr" class="nav-link active" data-scroll-target="#tldr">TLDR</a>
+  <ul class="collapse">
   <li><a href="#recap-session-1" id="toc-recap-session-1" class="nav-link" data-scroll-target="#recap-session-1">Recap Session 1</a></li>
   <li><a href="#überblick-ml-lebenszyklus" id="toc-überblick-ml-lebenszyklus" class="nav-link" data-scroll-target="#überblick-ml-lebenszyklus">Überblick ML-Lebenszyklus</a></li>
   <li><a href="#leseauftrag-the-method-of-critical-ai-studies-a-propaedeutic" id="toc-leseauftrag-the-method-of-critical-ai-studies-a-propaedeutic" class="nav-link" data-scroll-target="#leseauftrag-the-method-of-critical-ai-studies-a-propaedeutic">Leseauftrag “The Method of Critical AI Studies, A Propaedeutic”</a></li>
-  <li><a href="#typische-entscheidungen-bei-der-architekturwahl" id="toc-typische-entscheidungen-bei-der-architekturwahl" class="nav-link" data-scroll-target="#typische-entscheidungen-bei-der-architekturwahl">Typische Entscheidungen bei der Architekturwahl</a></li>
+  <li><a href="#typische-entscheidungen-bei-der-architekturwahl" id="toc-typische-entscheidungen-bei-der-architekturwahl" class="nav-link" data-scroll-target="#typische-entscheidungen-bei-der-architekturwahl">Typische Entscheidungen bei der Architekturwahl</a>
+  <ul class="collapse">
+  <li><a href="#what-type-of-data-are-you-dealing-with" id="toc-what-type-of-data-are-you-dealing-with" class="nav-link" data-scroll-target="#what-type-of-data-are-you-dealing-with">1. What <strong>Type of Data</strong> Are You Dealing With?</a></li>
+  <li><a href="#how-much-data-do-you-have-and-is-it-labeled" id="toc-how-much-data-do-you-have-and-is-it-labeled" class="nav-link" data-scroll-target="#how-much-data-do-you-have-and-is-it-labeled">2. How Much <strong>Data</strong> Do You Have (and Is It Labeled)?</a></li>
+  <li><a href="#what-task-are-you-trying-to-solve" id="toc-what-task-are-you-trying-to-solve" class="nav-link" data-scroll-target="#what-task-are-you-trying-to-solve">3. What <strong>Task</strong> Are You Trying to Solve?</a></li>
+  <li><a href="#what-is-the-performance-vs.-interpretability-balance" id="toc-what-is-the-performance-vs.-interpretability-balance" class="nav-link" data-scroll-target="#what-is-the-performance-vs.-interpretability-balance">4. What Is the <strong>Performance vs.&nbsp;Interpretability</strong> Balance?</a></li>
+  <li><a href="#what-are-your-resource-constraints" id="toc-what-are-your-resource-constraints" class="nav-link" data-scroll-target="#what-are-your-resource-constraints">5. What Are Your <strong>Resource Constraints</strong>?</a></li>
+  <li><a href="#is-real-time-or-edge-deployment-required" id="toc-is-real-time-or-edge-deployment-required" class="nav-link" data-scroll-target="#is-real-time-or-edge-deployment-required">6. Is <strong>Real-Time</strong> or <strong>Edge Deployment</strong> Required?</a></li>
+  <li><a href="#are-you-concerned-about-ethics-fairness-and-bias" id="toc-are-you-concerned-about-ethics-fairness-and-bias" class="nav-link" data-scroll-target="#are-you-concerned-about-ethics-fairness-and-bias">7. Are You Concerned About <strong>Ethics, Fairness, and Bias</strong>?</a></li>
+  <li><a href="#how-will-you-maintain-and-update-the-model" id="toc-how-will-you-maintain-and-update-the-model" class="nav-link" data-scroll-target="#how-will-you-maintain-and-update-the-model">8. How Will You <strong>Maintain and Update</strong> the Model?</a></li>
+  <li><a href="#do-you-need-any-special-techniques" id="toc-do-you-need-any-special-techniques" class="nav-link" data-scroll-target="#do-you-need-any-special-techniques">9. Do You Need Any <strong>Special Techniques</strong>?</a></li>
+  <li><a href="#prototype-and-compare-dont-just-guess" id="toc-prototype-and-compare-dont-just-guess" class="nav-link" data-scroll-target="#prototype-and-compare-dont-just-guess">10. <strong>Prototype and Compare</strong> (Don’t Just Guess)</a></li>
   <li><a href="#quick-reference-table" id="toc-quick-reference-table" class="nav-link" data-scroll-target="#quick-reference-table">Quick Reference Table</a></li>
+  <li><a href="#final-tip" id="toc-final-tip" class="nav-link" data-scroll-target="#final-tip">Final Tip</a></li>
+  </ul></li>
+  </ul></li>
   </ul>
 <div class="toc-actions"><ul><li><a href="https://github.com/DHBern/decoding-inequality-2025/edit/main/contents/sessions/02.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/DHBern/decoding-inequality-2025/issues/new/choose" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
     </div>
@@ -255,7 +276,7 @@
     <div>
     <div class="quarto-title-meta-heading">Modified</div>
     <div class="quarto-title-meta-contents">
-      <p class="date-modified">February 20, 2025</p>
+      <p class="date-modified">February 27, 2025</p>
     </div>
   </div>
     
@@ -266,21 +287,20 @@
 </header>
 
 
-<section id="tldr" class="level3">
-<h3 class="anchored" data-anchor-id="tldr">TLDR</h3>
+<section id="tldr" class="level1">
+<h1>TLDR</h1>
 <ul>
 <li>Recap Session 1</li>
 <li>Überblick ML-Lebenszyklus</li>
 <li>Leseauftrag gemeinsam anschauen</li>
 <li>Typische Entscheidungen bei der Architekturwahl</li>
 </ul>
-</section>
-<section id="recap-session-1" class="level3">
-<h3 class="anchored" data-anchor-id="recap-session-1">Recap Session 1</h3>
+<section id="recap-session-1" class="level2">
+<h2 class="anchored" data-anchor-id="recap-session-1">Recap Session 1</h2>
 <p>mündlich</p>
 </section>
-<section id="überblick-ml-lebenszyklus" class="level3">
-<h3 class="anchored" data-anchor-id="überblick-ml-lebenszyklus">Überblick ML-Lebenszyklus</h3>
+<section id="überblick-ml-lebenszyklus" class="level2">
+<h2 class="anchored" data-anchor-id="überblick-ml-lebenszyklus">Überblick ML-Lebenszyklus</h2>
 <p>Der ML-Lebenszyklus:</p>
 <ol type="1">
 <li>Architekturauswahl: Diskussion verschiedener ML-Architekturen und ihrer Auswirkungen auf Modellkapazitäten und -grenzen. Kritische Betrachtung, wie architektonische Entscheidungen bestimmte Voreingenommenheiten einbetten können.</li>
@@ -291,8 +311,8 @@
 <li>Governance und Regulierung: Diskussion aktueller und vorgeschlagener Regulierungsrahmen, ethischer Richtlinien und Herausforderungen bei der Steuerung sich schnell entwickelnder KI-Technologien.</li>
 </ol>
 </section>
-<section id="leseauftrag-the-method-of-critical-ai-studies-a-propaedeutic" class="level3">
-<h3 class="anchored" data-anchor-id="leseauftrag-the-method-of-critical-ai-studies-a-propaedeutic">Leseauftrag “The Method of Critical AI Studies, A Propaedeutic”</h3>
+<section id="leseauftrag-the-method-of-critical-ai-studies-a-propaedeutic" class="level2">
+<h2 class="anchored" data-anchor-id="leseauftrag-the-method-of-critical-ai-studies-a-propaedeutic">Leseauftrag “The Method of Critical AI Studies, A Propaedeutic”</h2>
 <p>This paper by Fabian Offert and Ranjodh Singh Dhaliwal critiques existing methodological tendencies in Critical AI Studies, arguing that the field lacks a cohesive methodology. The authors identify three primary forms of <em>casuistry</em>—problematic tendencies in critique—that hinder more rigorous analysis:</p>
 <ol type="1">
 <li><p><strong>Benchmark Casuistry</strong>: Overreliance on individual test cases (e.g., “AI got this prompt wrong, therefore AI is flawed”), which leads to shallow critiques that do not account for the probabilistic nature of machine-learning models.</p></li>
@@ -301,11 +321,11 @@
 </ol>
 <p>The authors advocate for a shift in methodology: instead of critiquing AI as if it were a static and deterministic system, scholars should engage with the <em>probabilistic</em> and <em>historically layered</em> nature of AI models. They call for an interdisciplinary approach, integrating computational insights with humanities-driven critique.</p>
 </section>
-<section id="typische-entscheidungen-bei-der-architekturwahl" class="level3">
-<h3 class="anchored" data-anchor-id="typische-entscheidungen-bei-der-architekturwahl">Typische Entscheidungen bei der Architekturwahl</h3>
+<section id="typische-entscheidungen-bei-der-architekturwahl" class="level2">
+<h2 class="anchored" data-anchor-id="typische-entscheidungen-bei-der-architekturwahl">Typische Entscheidungen bei der Architekturwahl</h2>
 <p>Below is a <strong>step-by-step “recipe”</strong>—in the form of guiding questions—to help you decide which <strong>machine-learning architecture</strong> might best suit your project. The idea is to systematically walk through <strong>key considerations</strong>: the data, the nature of the task, resource constraints, and more.</p>
-<section id="what-type-of-data-are-you-dealing-with" class="level4">
-<h4 class="anchored" data-anchor-id="what-type-of-data-are-you-dealing-with">1. What <strong>Type of Data</strong> Are You Dealing With?</h4>
+<section id="what-type-of-data-are-you-dealing-with" class="level3">
+<h3 class="anchored" data-anchor-id="what-type-of-data-are-you-dealing-with">1. What <strong>Type of Data</strong> Are You Dealing With?</h3>
 <ul>
 <li><strong>Images or video</strong> → Look at Convolutional Neural Networks (CNNs), possibly Vision Transformers.</li>
 <li><strong>Text, language, or other sequential data</strong> → Consider Recurrent Neural Networks (RNNs, LSTM, GRU) or Transformers.</li>
@@ -314,8 +334,8 @@
 <li><strong>Mixed or multimodal data</strong> (e.g., text + images) → Transformers with multimodal extensions or custom architectures.</li>
 </ul>
 </section>
-<section id="how-much-data-do-you-have-and-is-it-labeled" class="level4">
-<h4 class="anchored" data-anchor-id="how-much-data-do-you-have-and-is-it-labeled">2. How Much <strong>Data</strong> Do You Have (and Is It Labeled)?</h4>
+<section id="how-much-data-do-you-have-and-is-it-labeled" class="level3">
+<h3 class="anchored" data-anchor-id="how-much-data-do-you-have-and-is-it-labeled">2. How Much <strong>Data</strong> Do You Have (and Is It Labeled)?</h3>
 <ul>
 <li><strong>Plenty of labeled data</strong> → Deep learning is a strong contender; you can train large neural networks.</li>
 <li><strong>Very limited labeled data</strong> →
@@ -327,8 +347,8 @@
 <li><strong>Mixed (some labeled, a lot unlabeled)</strong> → Consider <strong>semi-supervised</strong> or <strong>self-supervised</strong> methods.</li>
 </ul>
 </section>
-<section id="what-task-are-you-trying-to-solve" class="level4">
-<h4 class="anchored" data-anchor-id="what-task-are-you-trying-to-solve">3. What <strong>Task</strong> Are You Trying to Solve?</h4>
+<section id="what-task-are-you-trying-to-solve" class="level3">
+<h3 class="anchored" data-anchor-id="what-task-are-you-trying-to-solve">3. What <strong>Task</strong> Are You Trying to Solve?</h3>
 <ul>
 <li><strong>Classification or regression</strong> (predicting categories/numbers) → Common with feedforward networks or ensembles (Random Forest, XGBoost).</li>
 <li><strong>Sequence prediction/analysis</strong> (e.g., forecasting time series, analyzing text) → RNNs, LSTMs/GRUs, or Transformers.</li>
@@ -336,66 +356,65 @@
 <li><strong>Detecting anomalies</strong> → Autoencoders or one-class SVMs are often used.</li>
 </ul>
 </section>
-<section id="what-is-the-performance-vs.-interpretability-balance" class="level4">
-<h4 class="anchored" data-anchor-id="what-is-the-performance-vs.-interpretability-balance">4. What Is the <strong>Performance vs.&nbsp;Interpretability</strong> Balance?</h4>
+<section id="what-is-the-performance-vs.-interpretability-balance" class="level3">
+<h3 class="anchored" data-anchor-id="what-is-the-performance-vs.-interpretability-balance">4. What Is the <strong>Performance vs.&nbsp;Interpretability</strong> Balance?</h3>
 <ul>
 <li><strong>Strong interpretability needed</strong> (healthcare, finance, or regulated sectors) → Simpler models (decision trees, linear models), or advanced methods but with extra interpretability techniques (e.g., SHAP, LIME).</li>
 <li><strong>Accuracy/performance is priority</strong> → Larger neural networks, ensembles. But remember that black-box models can raise ethical or compliance issues.</li>
 </ul>
 </section>
-<section id="what-are-your-resource-constraints" class="level4">
-<h4 class="anchored" data-anchor-id="what-are-your-resource-constraints">5. What Are Your <strong>Resource Constraints</strong>?</h4>
+<section id="what-are-your-resource-constraints" class="level3">
+<h3 class="anchored" data-anchor-id="what-are-your-resource-constraints">5. What Are Your <strong>Resource Constraints</strong>?</h3>
 <ul>
 <li><strong>Hardware availability</strong>: Do you have access to powerful GPUs/TPUs?</li>
 <li><strong>Budget</strong>: Training large models can be expensive in terms of cloud compute and electricity.</li>
 <li><strong>Time</strong>: If you need results quickly, large-scale training might be impractical; you could opt for smaller or pretrained models.</li>
 </ul>
 </section>
-<section id="is-real-time-or-edge-deployment-required" class="level4">
-<h4 class="anchored" data-anchor-id="is-real-time-or-edge-deployment-required">6. Is <strong>Real-Time</strong> or <strong>Edge Deployment</strong> Required?</h4>
+<section id="is-real-time-or-edge-deployment-required" class="level3">
+<h3 class="anchored" data-anchor-id="is-real-time-or-edge-deployment-required">6. Is <strong>Real-Time</strong> or <strong>Edge Deployment</strong> Required?</h3>
 <ul>
 <li><strong>Real-time/low-latency</strong> → You might need optimized or compressed models (pruning, quantization).</li>
 <li><strong>Edge devices</strong> (smartphones, IoT) → Smaller architectures or specialized hardware accelerators.</li>
 <li><strong>Batch processing</strong> (run offline) → Larger, more complex models are fine if you can afford the compute time.</li>
 </ul>
 </section>
-<section id="are-you-concerned-about-ethics-fairness-and-bias" class="level4">
-<h4 class="anchored" data-anchor-id="are-you-concerned-about-ethics-fairness-and-bias">7. Are You Concerned About <strong>Ethics, Fairness, and Bias</strong>?</h4>
+<section id="are-you-concerned-about-ethics-fairness-and-bias" class="level3">
+<h3 class="anchored" data-anchor-id="are-you-concerned-about-ethics-fairness-and-bias">7. Are You Concerned About <strong>Ethics, Fairness, and Bias</strong>?</h3>
 <ul>
 <li><strong>High-stakes decisions</strong> (criminal justice, hiring, healthcare) → Consider simpler or more transparent models, robust fairness checks, or specialized frameworks to reduce bias.</li>
 <li><strong>Large-scale public deployments</strong> → Must address potential bias in data and architecture. Tools exist (e.g., fairness libraries) to test and mitigate discriminatory outcomes.</li>
 </ul>
 </section>
-<section id="how-will-you-maintain-and-update-the-model" class="level4">
-<h4 class="anchored" data-anchor-id="how-will-you-maintain-and-update-the-model">8. How Will You <strong>Maintain and Update</strong> the Model?</h4>
+<section id="how-will-you-maintain-and-update-the-model" class="level3">
+<h3 class="anchored" data-anchor-id="how-will-you-maintain-and-update-the-model">8. How Will You <strong>Maintain and Update</strong> the Model?</h3>
 <ul>
 <li><strong>Frequent new data</strong> → Consider models that can be retrained or fine-tuned incrementally (e.g., Transfer Learning, partial retraining of large models).</li>
 <li><strong>Stable environment</strong> (data or requirements don’t change much) → A one-shot large training might be enough, with occasional updates.</li>
 </ul>
 </section>
-<section id="do-you-need-any-special-techniques" class="level4">
-<h4 class="anchored" data-anchor-id="do-you-need-any-special-techniques">9. Do You Need Any <strong>Special Techniques</strong>?</h4>
+<section id="do-you-need-any-special-techniques" class="level3">
+<h3 class="anchored" data-anchor-id="do-you-need-any-special-techniques">9. Do You Need Any <strong>Special Techniques</strong>?</h3>
 <ul>
 <li><strong>Dimensionality reduction or unsupervised representation</strong> → Autoencoders can learn compact representations, useful for anomaly detection or data visualization.</li>
 <li><strong>Generating synthetic data</strong> → GANs or Diffusion Models can create additional training samples or handle data-privacy constraints.</li>
 </ul>
 </section>
-<section id="prototype-and-compare-dont-just-guess" class="level4">
-<h4 class="anchored" data-anchor-id="prototype-and-compare-dont-just-guess">10. <strong>Prototype and Compare</strong> (Don’t Just Guess)</h4>
+<section id="prototype-and-compare-dont-just-guess" class="level3">
+<h3 class="anchored" data-anchor-id="prototype-and-compare-dont-just-guess">10. <strong>Prototype and Compare</strong> (Don’t Just Guess)</h3>
 <ul>
 <li><strong>Start with a baseline model</strong> (e.g., a simple logistic regression or small Random Forest) to see if you can meet your basic performance goal.</li>
 <li><strong>Incrementally add complexity</strong>: If you need more accuracy, consider deeper or more specialized networks.</li>
 <li><strong>Evaluate</strong> each approach using consistent metrics (accuracy, F1 score, or mean squared error), plus interpretability, training time, cost, and potential bias.</li>
 </ul>
 </section>
-</section>
-<section id="quick-reference-table" class="level2">
-<h2 class="anchored" data-anchor-id="quick-reference-table">Quick Reference Table</h2>
+<section id="quick-reference-table" class="level3">
+<h3 class="anchored" data-anchor-id="quick-reference-table">Quick Reference Table</h3>
 <p>Here’s a rough cheat-sheet matching common data/tasks to suggested architectures:</p>
 <table class="caption-top table">
 <colgroup>
-<col style="width:39%">
-<col style="width:60%">
+<col style="width:40%">
+<col style="width:59%">
 </colgroup>
 <thead>
 <tr class="header">
@@ -434,11 +453,13 @@
 </tr>
 </tbody>
 </table>
-<section id="final-tip" class="level4">
-<h4 class="anchored" data-anchor-id="final-tip">Final Tip</h4>
+</section>
+<section id="final-tip" class="level3">
+<h3 class="anchored" data-anchor-id="final-tip">Final Tip</h3>
 <p><strong>Answering these 10 questions</strong> should narrow down your options. The best practice is to <strong>prototype</strong> a couple of models, run real tests, and pick the one that strikes the best <strong>balance</strong> between accuracy, interpretability, efficiency, cost, and ethical considerations.</p>
 
 
+</section>
 </section>
 </section>
 
@@ -453,8 +474,8 @@
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="../../contents/interesting-stuff.html" class="pagination-link" aria-label="Interessante Links">
-        <span class="nav-page-text">Interessante Links</span> <i class="bi bi-arrow-right-short"></i>
+      <a href="../../contents/sessions/03.html" class="pagination-link" aria-label="Session 3">
+        <span class="nav-page-text">Session 3</span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>
